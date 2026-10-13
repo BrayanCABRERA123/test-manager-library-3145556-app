@@ -25,6 +25,8 @@ const api = {
   login: (username, password) => api.request('POST', '/auth/login', { username, password }),
   categories: () => api.request('GET', '/categories'),
   createLibrarian: (username, password) => api.request('POST', '/users', { username, password, role: 'librarian' }),
+  members: (q) => api.request('GET', `/members?q=${encodeURIComponent(q)}&size=50`),
+  createMember: (full_name, document_number) => api.request('POST', '/members', { full_name, document_number }),
 };
 
 window.api = api;
