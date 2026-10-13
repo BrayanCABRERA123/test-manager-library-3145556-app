@@ -42,3 +42,6 @@ button.link { padding: 0; color: #8a4b2a; background: none; text-decoration: und
 .ok { margin: 0; color: #1e6b3a; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .tags li { padding: 6px 14px; border: 1px solid #e4ded3; border-radius: 999px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+.row input { flex: 1 1 180px; }
+.list { margin: 0; padding-left: 18px; }
