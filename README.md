@@ -13,6 +13,7 @@ El spec está en [`test-manager-library-3145556-docs`](https://github.com/Brayan
 |---|---|---|
 | Iniciar sesión (muestra el error sin decir si falló el usuario o la clave) | público | `POST /auth/login` |
 | Categorías | autenticado | `GET /categories` |
+| Socios: crear, buscar y listar | admin, librarian | `GET /members`, `POST /members` |
 | Dar de alta bibliotecario (solo se muestra al admin, CA-10.5 / HU-02) | admin | `POST /users` |
 
 Los errores se muestran con el `message` y los `details` del cuerpo de error único del contrato.
@@ -34,7 +35,7 @@ La URL de la API se cambia en `config.js`.
 
 | Tarea | Estado |
 |---|---|
-| T-22 login, catálogo, socios, prestar, devolver, vencidos, reporte | ✅ parcial: login, categorías y alta de bibliotecarios. ⏳ Catálogo, socios, préstamos, devoluciones, vencidos y reporte quedan pendientes porque la API aún no los expone |
+| T-22 login, catálogo, socios, prestar, devolver, vencidos, reporte | ✅ parcial: login, categorías, socios y alta de bibliotecarios. ⏳ Catálogo, préstamos, devoluciones, vencidos y reporte quedan pendientes porque la API aún no los expone |
 
 **Decisión técnica:** por tiempo, React se carga desde CDN con Babel en el navegador, sin paso de compilación. D-15 de
 `spec-laravel/plan.md` define Vite; migrar a Vite queda pendiente y no cambia las pantallas.
